@@ -1,0 +1,7 @@
+{% for donor in list %}
+	<ul>
+		<li>{{donor.name}}
+		<li>{{donor.amount}}
+	</ul>
+{% endfor %}
+<a href="{% url 'donate' %}">Wanting to contribute</a>

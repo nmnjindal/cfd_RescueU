@@ -1,0 +1,7 @@
+<form action="{% url 'donate' %}" method="post">
+{%csrf_token%}
+<table>
+{{form}}
+</table>
+<button type="submit">Donate</button>
+</form>

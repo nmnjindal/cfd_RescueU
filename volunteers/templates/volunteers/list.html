@@ -1,0 +1,8 @@
+<h1>Volunteers</h1>
+<ul>
+{% for volunteer in vol_list %}
+    <li>{{ volunteer.name }}</li>
+    <li>{{ volunteer.contact_number }}</li>
+    <li>{{ volunteer.email }}</li>
+{% endfor %}
+</ul>
