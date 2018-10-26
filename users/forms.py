@@ -10,3 +10,6 @@ class SignUpForm(UserCreationForm):
 	class Meta:
 		model=User
 		fields=('username','first_name','last_name','email','password1','password2')
+
+class commentform(forms.Form):
+	comment=forms.CharField(max_length=1000)

@@ -1,8 +1,43 @@
-<h1>Volunteers</h1>
-<ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container"  >
+  <h2>Volunteers Details:</h2>
+  <!-- <p>The .table-hover class enables a hover state on table rows:</p>             -->
+  <table class="table table-striped  table-hover" style="width: 500px">
+    <thead>
+      <tr>
+        <th>Volunteer</th>
+        <th>Contact Number</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
 {% for volunteer in vol_list %}
-    <li>{{ volunteer.name }}</li>
-    <li>{{ volunteer.contact_number }}</li>
-    <li>{{ volunteer.email }}</li>
+
+      <tr>
+        <td>{{ volunteer.name }}</td>
+    <td>{{ volunteer.contact_number }}</td>
+    <td>{{ volunteer.email }}</td>
+        <!-- <td>john@example.com</td> -->
+      </tr>
+      
+
 {% endfor %}
-</ul>
+</tbody>
+  </table>
+</div>
+<center>
+<button><a href="{% url 'donate' %}">Wanting to contribute</a>
+</button>
+</center>
+</body>
+</html>
