@@ -22,6 +22,7 @@ import donors.views
 import users.views
 
 urlpatterns = [
+    path('',users.views.home,name='home'),
     path('admin/', admin.site.urls),
     path('volunteer/', volunteers.views.index, name='index'),
     path('volunteer/register/', volunteers.views.register, name='register'),
@@ -32,6 +33,7 @@ urlpatterns = [
     path('users/sos/',users.views.sos,name='sos'),
     url(r'^accounts/login/$',auth_views.LoginView.as_view(template_name='users/login.html'),name='login'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('hospitals/',users.views.hospitals,name='hospitals')
 #    url(r'^login/$',auth_views.LoginView.as_view(template_name='users/login.html'),name='login'),
 #   url(r'^logout/$',auth_views.LogoutView,{'next_page':'/volunteer'},name='logout'),
 ]

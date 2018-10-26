@@ -6,6 +6,5 @@
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Login</button>
-  </form>
-<p><a href="{% url 'logout' %}">logout</a></p>  
+  </form>  
 {% endblock %}
