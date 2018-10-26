@@ -121,3 +121,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.sendgrid.net'
+EMAIL_USE_TLS= True
+EMAIL_PORT=587
+EMAIL_HOST_USER='apikey'
+EMAIL_HOST_PASSWORD='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'
+
+LOGIN_REDIRECT_URL='users/sos/'
+LOGOUT_REDIRECT_URL='http://127.0.0.1:8000/volunteer/'
