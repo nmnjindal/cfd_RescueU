@@ -12,7 +12,7 @@ def donate(request):
 		form=PostForm(request.POST)
 		if(form.is_valid()):
 			form.save()
-			return HttpResponseRedirect('http://127.0.0.1:8000/donors/')
+			return HttpResponseRedirect('/donors/')
 	else:
 		form=PostForm()
 	return render(request,'donors/donate.html',{'form' : form})

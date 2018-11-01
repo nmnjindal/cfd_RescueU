@@ -17,7 +17,7 @@ def signup(request):
         form=SignUpForm(request.POST)
         if(form.is_valid()):
             form.save()
-            return HttpResponseRedirect('http://127.0.0.1:8000/')
+            return HttpResponseRedirect('/')
     else:
         form=SignUpForm()
     return render(request,'users/signup.html',{'form' : form})
